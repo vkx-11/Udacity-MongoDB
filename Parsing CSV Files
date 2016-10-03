@@ -18,6 +18,7 @@ DATAFILE = "beatles-diskography.csv"
 
 def parse_file(datafile):
     data = []
+    
     with open(datafile, "rb") as f:
         header = f.readline().split(",")
         counter = 0
@@ -29,7 +30,7 @@ def parse_file(datafile):
             entry = {}
             
             for i, value in enumerate (fields):
-                entry [header[i].strip()] = value.strip ()
+                entry[header[i].strip()] = value.strip ()
               
             data.append(entry)
             counter += 1
