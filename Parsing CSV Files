@@ -18,16 +18,16 @@ def parse_file(datafile):
         header = f.readline().split(",")
         counter = 0
         for line in f:
-          if counter == 10:
-            break
+            if counter == 10:
+                break
             
             fields = line.split (",")
             entry = {}
             
             for i, value in enumerate (fields):
-              entry [header[i].strip()] = value.strip ()
+                entry [header[i].strip()] = value.strip ()
               
-            data.append(line)
+            data.append(entry)
             counter += 1
             
             print line
